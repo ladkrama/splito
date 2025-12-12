@@ -17,13 +17,13 @@ status = 200
 
 [context]
 [context.staging]
-command = "npm install && npm run build:staging"
+command = "npm ci && npm run build:staging"
 
 [context.staging.environment]
 NODE_ENV = "staging"
 
 [context.production]
-command = "npm install && npm run build:production"
+command = "npm ci && npm run build:production"
 
 [context.production.environment]
 NODE_ENV = "production"
