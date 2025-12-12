@@ -1,0 +1,36 @@
+[build]
+command = "npx vite build"
+publish = "dist"
+functions = "netlify/functions"
+
+[build.environment]
+NODE_VERSION = "18"
+
+[functions]
+node_bundler = "esbuild"
+external_node_modules = [ "firebase-admin" ]
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+[context]
+[context.staging]
+command = "npm run build:staging"
+
+[context.staging.environment]
+NODE_ENV = "staging"
+
+[context.production]
+command = "npm run build:production"
+
+[context.production.environment]
+NODE_ENV = "production"
+
+[dev]
+command = "npm run dev"
+targetPort = 3000
+port = 8888
+publish = "dist"
+autoLaunch = true
