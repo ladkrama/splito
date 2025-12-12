@@ -1,5 +1,5 @@
 [build]
-command = "npx vite build"
+command = "npm ci && npm run build"
 publish = "dist"
 functions = "netlify/functions"
 
@@ -18,13 +18,13 @@ status = 200
 
 [context]
 [context.staging]
-command = "npm install && npx vite build --mode staging"
+command = "npm ci && npm run build:staging"
 
 [context.staging.environment]
 NODE_ENV = "staging"
 
 [context.production]
-command = "npm install && npx vite build --mode production"
+command = "npm ci && npm run build:production"
 
 [context.production.environment]
 NODE_ENV = "production"
