@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles, Users, TrendingUp, Shield, Calculator, Zap } from 'lucide-react';
+import { ArrowRight, Sparkles, Users, TrendingUp, Shield, Calculator, Zap, Calendar, Vote, CheckCircle, Clock } from 'lucide-react';
 import { Link, Navigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { useAppPreferences } from '../contexts/AppPreferencesContext';
@@ -198,6 +198,162 @@ export default function Home() {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* Event Scheduling Section */}
+        <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+              {/* Left Content */}
+              <div className="space-y-6 order-2 lg:order-1">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-700 text-sm font-medium">
+                  <Calendar className="w-4 h-4" />
+                  <span>Nouveauté</span>
+                </div>
+
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+                  Organisez vos événements en un clin d'œil
+                </h2>
+
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Plus besoin de jongler entre plusieurs applications. Créez un événement, proposez des dates et laissez vos invités voter pour leur disponibilité.
+                </p>
+
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                      <Calendar className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-1">Proposez plusieurs dates</h3>
+                      <p className="text-gray-600 text-sm">Créez un sondage avec toutes les dates possibles pour votre événement</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
+                      <Vote className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-1">Votez simplement</h3>
+                      <p className="text-gray-600 text-sm">Chaque participant indique ses disponibilités en un clic</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center">
+                      <CheckCircle className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-1">Confirmez automatiquement</h3>
+                      <p className="text-gray-600 text-sm">La date qui convient au plus grand nombre est mise en évidence</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-4">
+                  <Link to="/register" className="group inline-flex">
+                    <Button
+                      size="lg"
+                      className="shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
+                    >
+                      <span>Essayer maintenant</span>
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Right Content - Visual */}
+              <div className="relative order-1 lg:order-2">
+                <div className="relative bg-gradient-to-br from-primary-50 to-orange-50 rounded-3xl p-8 lg:p-12">
+                  {/* Decorative circles */}
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-primary-400/20 rounded-full blur-3xl" />
+                  <div className="absolute bottom-0 left-0 w-40 h-40 bg-orange-400/20 rounded-full blur-3xl" />
+
+                  {/* Mock calendar interface */}
+                  <div className="relative bg-white rounded-2xl shadow-2xl p-6 space-y-4">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center">
+                          <Calendar className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900">Soirée jeux</h4>
+                          <p className="text-xs text-gray-500">8 participants</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between p-3 bg-green-50 border-2 border-green-200 rounded-lg">
+                        <div className="flex items-center gap-2">
+                          <Clock className="w-4 h-4 text-green-600" />
+                          <span className="text-sm font-medium text-gray-900">Sam 20 Dec</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="flex -space-x-2">
+                            <div className="w-6 h-6 rounded-full bg-blue-500 border-2 border-white" />
+                            <div className="w-6 h-6 rounded-full bg-green-500 border-2 border-white" />
+                            <div className="w-6 h-6 rounded-full bg-orange-500 border-2 border-white" />
+                            <div className="w-6 h-6 rounded-full bg-pink-500 border-2 border-white" />
+                          </div>
+                          <span className="text-xs font-semibold text-green-600">7/8</span>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <div className="flex items-center gap-2">
+                          <Clock className="w-4 h-4 text-gray-400" />
+                          <span className="text-sm text-gray-600">Dim 21 Dec</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="flex -space-x-2">
+                            <div className="w-6 h-6 rounded-full bg-blue-500 border-2 border-white" />
+                            <div className="w-6 h-6 rounded-full bg-green-500 border-2 border-white" />
+                          </div>
+                          <span className="text-xs text-gray-500">4/8</span>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <div className="flex items-center gap-2">
+                          <Clock className="w-4 h-4 text-gray-400" />
+                          <span className="text-sm text-gray-600">Lun 22 Dec</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="flex -space-x-2">
+                            <div className="w-6 h-6 rounded-full bg-orange-500 border-2 border-white" />
+                          </div>
+                          <span className="text-xs text-gray-500">2/8</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="pt-2 border-t border-gray-200">
+                      <div className="flex items-center justify-center gap-2 text-sm text-green-600 font-medium">
+                        <CheckCircle className="w-4 h-4" />
+                        <span>Samedi 20 Dec recommandé</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Floating badge */}
+                  <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-lg p-3 animate-float">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
+                        <Vote className="w-4 h-4 text-green-600" />
+                      </div>
+                      <div>
+                        <div className="text-xs text-gray-500">Votes reçus</div>
+                        <div className="text-sm font-bold text-gray-900">8/8</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
