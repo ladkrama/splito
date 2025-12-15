@@ -64,16 +64,16 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative px-4 pt-12 pb-20 sm:px-6 sm:pt-20 sm:pb-32 lg:px-8 lg:pt-24 lg:pb-40">
           {/* Background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-orange-50 -z-10" />
-          <div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl -z-10" />
-          <div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-gradient-to-br from-orange-400/20 to-amber-400/20 rounded-full blur-3xl -z-10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-orange-50 -z-10" />
+          <div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-primary-400/20 rounded-full blur-3xl -z-10" />
+          <div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-orange-400/20 rounded-full blur-3xl -z-10" />
 
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               {/* Left Content */}
               <div className="text-center lg:text-left space-y-8 animate-fade-in">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium">
                   <Sparkles className="w-4 h-4" />
                   <span>Gratuit et sans publicité</span>
                 </div>
@@ -82,7 +82,7 @@ export default function Home() {
                 <div className="space-y-4">
                   <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
                     <span className="block text-gray-900">Partagez vos</span>
-                    <span className="block bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">dépenses</span>
+                    <span className="block text-primary-600">dépenses</span>
                     <span className="block text-gray-900">simplement</span>
                   </h1>
                   <p className="text-lg sm:text-xl text-gray-600 max-w-xl mx-auto lg:mx-0">
@@ -95,7 +95,7 @@ export default function Home() {
                   <Link to="/register" className="group">
                     <Button
                       size="lg"
-                      className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300 flex items-center justify-center gap-2"
+                      className="w-full sm:w-auto shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2"
                     >
                       <span>Commencer gratuitement</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -106,7 +106,7 @@ export default function Home() {
                     <Button
                       variant="outline"
                       size="lg"
-                      className="w-full sm:w-auto border-2 border-gray-300 hover:border-gray-400 hover:bg-gray-50 transition-all duration-300"
+                      className="w-full sm:w-auto border-2 hover:bg-gray-50 transition-all duration-300"
                     >
                       Se connecter
                     </Button>
@@ -150,8 +150,8 @@ export default function Home() {
 
                   <div className="hidden lg:block absolute -right-8 bottom-32 bg-white rounded-2xl shadow-xl p-4 w-48 animate-float" style={{ animationDelay: '1s' }}>
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                        <Users className="w-5 h-5 text-blue-600" />
+                      <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center">
+                        <Users className="w-5 h-5 text-primary-600" />
                       </div>
                       <div>
                         <div className="text-xs text-gray-500">Groupes actifs</div>
@@ -204,20 +204,20 @@ export default function Home() {
 
         {/* CTA Section */}
         <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-cyan-600 -z-10" />
+          <div className="absolute inset-0 bg-primary-600 -z-10" />
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30 -z-10" />
 
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
               Prêt à simplifier vos dépenses ?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
               Rejoignez des milliers d'utilisateurs qui font confiance à Splito pour gérer leurs dépenses partagées
             </p>
             <Link to="/register" className="inline-block group">
               <Button
                 size="lg"
-                className="bg-white text-blue-600 hover:bg-gray-50 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2"
+                className="bg-white text-primary-600 hover:bg-gray-50 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <span>Créer mon compte gratuitement</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
