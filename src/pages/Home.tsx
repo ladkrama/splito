@@ -62,11 +62,11 @@ export default function Home() {
 
       <main className="overflow-hidden">
         {/* Hero Section */}
-        <section className="relative px-4 pt-12 pb-20 sm:px-6 sm:pt-20 sm:pb-32 lg:px-8 lg:pt-24 lg:pb-40">
+        <section className="relative px-4 pt-12 pb-20 sm:px-6 sm:pt-20 sm:pb-32 lg:px-8 lg:pt-24 lg:pb-40 overflow-hidden">
           {/* Background gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-orange-50 -z-10" />
-          <div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-primary-400/20 rounded-full blur-3xl -z-10" />
-          <div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-orange-400/20 rounded-full blur-3xl -z-10" />
+          <div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-72 h-72 lg:w-96 lg:h-96 bg-primary-400/20 rounded-full blur-3xl -z-10" />
+          <div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-72 h-72 lg:w-96 lg:h-96 bg-orange-400/20 rounded-full blur-3xl -z-10" />
 
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -136,10 +136,10 @@ export default function Home() {
                   <MobilePreview isBlueStyle={isBlueStyle} />
 
                   {/* Floating cards */}
-                  <div className="hidden lg:block absolute -left-8 top-20 bg-white rounded-2xl shadow-xl p-4 w-48 animate-float" style={{ animationDelay: '0s' }}>
+                  <div className="hidden lg:block absolute -left-8 top-20 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-4 w-48 animate-float border border-gray-100" style={{ animationDelay: '0s' }}>
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
-                        <TrendingUp className="w-5 h-5 text-green-600" />
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
+                        <TrendingUp className="w-5 h-5 text-white" />
                       </div>
                       <div>
                         <div className="text-xs text-gray-500">Total économisé</div>
@@ -148,10 +148,10 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="hidden lg:block absolute -right-8 bottom-32 bg-white rounded-2xl shadow-xl p-4 w-48 animate-float" style={{ animationDelay: '1s' }}>
+                  <div className="hidden lg:block absolute -right-8 bottom-32 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-4 w-48 animate-float border border-gray-100" style={{ animationDelay: '1s' }}>
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center">
-                        <Users className="w-5 h-5 text-primary-600" />
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                        <Users className="w-5 h-5 text-white" />
                       </div>
                       <div>
                         <div className="text-xs text-gray-500">Groupes actifs</div>
@@ -203,11 +203,16 @@ export default function Home() {
         </section>
 
         {/* Event Scheduling Section */}
-        <section className="px-4 py-16 sm:px-6 sm:py-24 lg:px-8 bg-white">
+        <section className="relative px-4 py-16 sm:px-6 sm:py-24 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-gray-50 overflow-hidden">
+          {/* Decorative background elements */}
+          <div className="absolute top-0 left-0 w-72 h-72 lg:w-96 lg:h-96 bg-blue-400/10 rounded-full blur-3xl -z-10" />
+          <div className="absolute bottom-0 right-0 w-72 h-72 lg:w-96 lg:h-96 bg-orange-400/10 rounded-full blur-3xl -z-10" />
+
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               {/* Left Content */}
-              <div className="space-y-6 order-2 lg:order-1">
+              <div className="space-y-6 order-2 lg:order-1 animate-fade-in"
+                   style={{ animationDelay: '0.2s' }}>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-700 text-sm font-medium">
                   <Calendar className="w-4 h-4" />
                   <span>Nouveauté</span>
@@ -267,14 +272,15 @@ export default function Home() {
               </div>
 
               {/* Right Content - Visual */}
-              <div className="relative order-1 lg:order-2">
-                <div className="relative bg-gradient-to-br from-primary-50 to-orange-50 rounded-3xl p-8 lg:p-12">
+              <div className="relative order-1 lg:order-2 animate-fade-in"
+                   style={{ animationDelay: '0.4s' }}>
+                <div className="relative bg-gradient-to-br from-primary-50 to-orange-50 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-lg">
                   {/* Decorative circles */}
-                  <div className="absolute top-0 right-0 w-40 h-40 bg-primary-400/20 rounded-full blur-3xl" />
-                  <div className="absolute bottom-0 left-0 w-40 h-40 bg-orange-400/20 rounded-full blur-3xl" />
+                  <div className="absolute top-0 right-0 w-32 h-32 sm:w-40 sm:h-40 bg-primary-400/20 rounded-full blur-3xl" />
+                  <div className="absolute bottom-0 left-0 w-32 h-32 sm:w-40 sm:h-40 bg-orange-400/20 rounded-full blur-3xl" />
 
                   {/* Mock calendar interface */}
-                  <div className="relative bg-white rounded-2xl shadow-2xl p-6 space-y-4">
+                  <div className="relative bg-white rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300 p-4 sm:p-6 space-y-4">
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center">
@@ -341,10 +347,10 @@ export default function Home() {
                   </div>
 
                   {/* Floating badge */}
-                  <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-lg p-3 animate-float">
+                  <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-3 animate-float border border-gray-100">
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
-                        <Vote className="w-4 h-4 text-green-600" />
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
+                        <Vote className="w-4 h-4 text-white" />
                       </div>
                       <div>
                         <div className="text-xs text-gray-500">Votes reçus</div>
