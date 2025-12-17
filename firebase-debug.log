@@ -12,3 +12,15 @@
 [info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=896431300&redirect_uri=http%3A%2F%2Flocalhost%3A9006
 [info] 
 [info] Waiting for authentication...
+[debug] [2025-12-17T08:34:38.829Z] ----------------------------------------------------------------------
+[debug] [2025-12-17T08:34:38.832Z] Command:       /usr/local/bin/node /tmp/cc-agent/37507899/project/node_modules/.bin/firebase deploy --only hosting --project splito-db83f --non-interactive
+[debug] [2025-12-17T08:34:38.832Z] CLI Version:   13.35.1
+[debug] [2025-12-17T08:34:38.832Z] Platform:      linux
+[debug] [2025-12-17T08:34:38.833Z] Node Version:  v22.21.1
+[debug] [2025-12-17T08:34:38.833Z] Time:          Wed Dec 17 2025 08:34:38 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-12-17T08:34:38.833Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-12-17T08:34:38.835Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-12-17T08:34:39.335Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-17T08:34:39.458Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-12-17T08:34:39.458Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
